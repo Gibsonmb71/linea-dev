@@ -18,6 +18,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Validate serialized block markup
+        run: npm run validate:blocks
+
       - name: Validate PHP syntax
         run: find . -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l
 
