@@ -4,7 +4,7 @@ Use this checklist before merging theme layout changes.
 
 ## Keyboard checks
 
-- The skip link appears when tabbing into the page.
+- WordPress core's block-theme skip link appears when tabbing into the page.
 - The skip link moves focus to the main content area.
 - Navigation, search, buttons, and article links can be reached by keyboard.
 - Focus order follows the visible page order.

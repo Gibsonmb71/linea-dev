@@ -18,6 +18,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Validate serialized block markup
+        run: npm run validate:blocks
+
       - name: Validate PHP syntax
         run: find . -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l
 
@@ -43,9 +49,9 @@ jobs:
 
       - name: Check template accessibility anchors
         run: |
-          grep -q 'href="#content"' parts/header.html
           grep -q 'id="content"' templates/*.html
           grep -q ':focus-visible' style.css
+          grep -q '.skip-link:focus' style.css
 
       - name: Check search labels
         run: |

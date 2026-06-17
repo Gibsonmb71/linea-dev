@@ -1,4 +1,4 @@
-# Weekly Wildcat WordPress Theme
+# Linea WordPress Theme
 
 A modern WordPress block theme for student newspaper and school journalism websites.
 
@@ -29,9 +29,9 @@ style.css    Theme metadata and small responsive helpers
 ## Local testing
 
 1. Install WordPress locally or on a staging site.
-2. Copy this theme into `wp-content/themes/weekly-wildcat/`.
+2. Copy this theme into `wp-content/themes/linea/`.
 3. In WordPress Admin, go to **Appearance → Themes**.
-4. Activate **Weekly Wildcat**.
+4. Activate **Linea**.
 5. Customize templates in **Appearance → Editor**.
 
 ## Validation
@@ -41,7 +41,7 @@ This repo includes GitHub Actions workflows for theme maintenance:
 - `Theme checks` validates PHP syntax, JSON files, required block-theme files, pattern headers, accessibility anchors, search labels, and placeholder links.
 - `WordPress theme review` runs the official WordPress Theme Check action in CI.
 - `Build theme ZIP` creates a clean installable ZIP artifact on pull requests.
-- `WordPress Playground preview` adds a browser preview button to pull requests.
+- `PR Preview - Build` and `PR Preview - Publish` build a public installable ZIP and add a working WordPress Playground preview button to pull requests.
 - `Release theme ZIP` publishes a packaged ZIP when a `v*` tag is pushed.
 
 ## Release workflow
@@ -49,7 +49,7 @@ This repo includes GitHub Actions workflows for theme maintenance:
 1. Update the version in `style.css`, `functions.php`, and `readme.txt`.
 2. Create a tag such as `v0.5.0`.
 3. Push the tag to GitHub.
-4. Download `weekly-wildcat.zip` from the generated GitHub release.
+4. Download `linea.zip` from the generated GitHub release.
 
 ## License
 
