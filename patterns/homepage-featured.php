@@ -6,8 +6,8 @@
  * Description: A native Query Loop front page with a lead story and editor picks rail.
  */
 ?>
-<!-- wp:group {"align":"wide","className":"ww-home-layout","style":{"spacing":{"blockGap":"var:preset|spacing|50","margin":{"bottom":"var:preset|spacing|70"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignwide ww-home-layout" style="margin-bottom:var(--wp--preset--spacing--70)">
+<!-- wp:group {"align":"wide","className":"ww-home-layout","style":{"spacing":{"blockGap":"var:preset|spacing|50","margin":{"bottom":"var:preset|spacing|60"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide ww-home-layout" style="margin-bottom:var(--wp--preset--spacing--60)">
 	<!-- wp:query {"query":{"perPage":1,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":false},"className":"ww-lead-query"} -->
 	<div class="wp-block-query ww-lead-query">
 		<!-- wp:post-template -->
@@ -64,8 +64,20 @@
 		</div>
 		<!-- /wp:query -->
 
-		<!-- wp:group {"className":"ww-newsletter-box","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","right":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|50"},"blockGap":"var:preset|spacing|30"}},"backgroundColor":"newsprint","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group ww-newsletter-box has-newsprint-background-color has-background" style="padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)">
+		<!-- wp:heading {"className":"ww-section-heading","level":2} -->
+		<h2 class="wp-block-heading ww-section-heading">Most Read</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:query {"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"comment_count","inherit":false},"className":"ww-ranked-list"} -->
+		<div class="wp-block-query ww-ranked-list">
+			<!-- wp:post-template -->
+				<!-- wp:post-title {"isLink":true,"level":3,"fontSize":"small"} /-->
+			<!-- /wp:post-template -->
+		</div>
+		<!-- /wp:query -->
+
+		<!-- wp:group {"className":"ww-newsletter-box","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|30"}},"backgroundColor":"newsprint","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group ww-newsletter-box has-newsprint-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 			<!-- wp:heading {"level":2,"fontSize":"medium"} -->
 			<h2 class="wp-block-heading has-medium-font-size">Stay informed</h2>
 			<!-- /wp:heading -->
