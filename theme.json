@@ -3,16 +3,25 @@
   "version": 2,
   "settings": {
     "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
     "layout": {
-      "contentSize": "720px",
-      "wideSize": "1180px"
+      "contentSize": "760px",
+      "wideSize": "1280px"
+    },
+    "border": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true
     },
     "color": {
+      "defaultDuotone": false,
+      "defaultGradients": false,
       "palette": [
         {
           "name": "Ink",
           "slug": "ink",
-          "color": "#141414"
+          "color": "#111111"
         },
         {
           "name": "Paper",
@@ -20,24 +29,103 @@
           "color": "#fffdf8"
         },
         {
+          "name": "Newsprint",
+          "slug": "newsprint",
+          "color": "#f5f2ea"
+        },
+        {
+          "name": "Line",
+          "slug": "line",
+          "color": "#d8d2c7"
+        },
+        {
           "name": "Muted",
           "slug": "muted",
-          "color": "#666666"
+          "color": "#65605a"
         },
         {
           "name": "Accent",
           "slug": "accent",
-          "color": "#7a1f2b"
+          "color": "#b51f2a"
         },
         {
           "name": "Accent Dark",
           "slug": "accent-dark",
-          "color": "#4d101a"
+          "color": "#75131c"
+        },
+        {
+          "name": "Section Blue",
+          "slug": "section-blue",
+          "color": "#1d4f91"
+        },
+        {
+          "name": "Section Green",
+          "slug": "section-green",
+          "color": "#286b3c"
+        },
+        {
+          "name": "Section Purple",
+          "slug": "section-purple",
+          "color": "#68418d"
+        }
+      ]
+    },
+    "dimensions": {
+      "minHeight": true
+    },
+    "spacing": {
+      "blockGap": true,
+      "margin": true,
+      "padding": true,
+      "units": [
+        "px",
+        "rem",
+        "em",
+        "%",
+        "vw",
+        "vh"
+      ],
+      "spacingSizes": [
+        {
+          "name": "2",
+          "slug": "20",
+          "size": "0.5rem"
+        },
+        {
+          "name": "3",
+          "slug": "30",
+          "size": "0.75rem"
+        },
+        {
+          "name": "4",
+          "slug": "40",
+          "size": "1rem"
+        },
+        {
+          "name": "5",
+          "slug": "50",
+          "size": "1.5rem"
+        },
+        {
+          "name": "6",
+          "slug": "60",
+          "size": "2rem"
+        },
+        {
+          "name": "7",
+          "slug": "70",
+          "size": "3rem"
+        },
+        {
+          "name": "8",
+          "slug": "80",
+          "size": "4rem"
         }
       ]
     },
     "typography": {
       "fluid": true,
+      "dropCap": true,
       "fontFamilies": [
         {
           "fontFamily": "Georgia, 'Times New Roman', serif",
@@ -45,12 +133,22 @@
           "slug": "serif"
         },
         {
-          "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+          "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
           "name": "System Sans",
           "slug": "system-sans"
+        },
+        {
+          "fontFamily": "'Arial Narrow', 'Helvetica Neue Condensed', 'Roboto Condensed', Arial, sans-serif",
+          "name": "Condensed Sans",
+          "slug": "condensed-sans"
         }
       ],
       "fontSizes": [
+        {
+          "name": "Extra Small",
+          "slug": "x-small",
+          "size": "0.75rem"
+        },
         {
           "name": "Small",
           "slug": "small",
@@ -62,25 +160,30 @@
           "size": "1rem"
         },
         {
+          "name": "Medium",
+          "slug": "medium",
+          "size": "1.125rem"
+        },
+        {
           "name": "Large",
           "slug": "large",
-          "size": "1.5rem"
+          "size": "clamp(1.35rem, 1.1rem + 0.9vw, 1.875rem)"
         },
         {
           "name": "Extra Large",
           "slug": "x-large",
-          "size": "clamp(2rem, 5vw, 4rem)"
+          "size": "clamp(1.9rem, 1.4rem + 2vw, 3rem)"
+        },
+        {
+          "name": "XX Large",
+          "slug": "xx-large",
+          "size": "clamp(2.4rem, 1.7rem + 3.2vw, 4.8rem)"
+        },
+        {
+          "name": "Masthead",
+          "slug": "masthead",
+          "size": "clamp(2.6rem, 9vw, 6rem)"
         }
-      ]
-    },
-    "spacing": {
-      "units": [
-        "px",
-        "rem",
-        "em",
-        "%",
-        "vw",
-        "vh"
       ]
     }
   },
@@ -89,15 +192,18 @@
       "background": "var:preset|color|paper",
       "text": "var:preset|color|ink"
     },
+    "spacing": {
+      "blockGap": "var:preset|spacing|50"
+    },
     "typography": {
       "fontFamily": "var:preset|font-family|system-sans",
       "fontSize": "var:preset|font-size|normal",
-      "lineHeight": "1.65"
+      "lineHeight": "1.6"
     },
     "elements": {
       "button": {
         "border": {
-          "radius": "999px"
+          "radius": "0"
         },
         "color": {
           "background": "var:preset|color|accent",
@@ -110,31 +216,88 @@
             "bottom": "0.75rem",
             "left": "1rem"
           }
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|condensed-sans",
+          "fontSize": "var:preset|font-size|small",
+          "fontWeight": "700",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.04em"
+        }
+      },
+      "caption": {
+        "color": {
+          "text": "var:preset|color|muted"
+        },
+        "typography": {
+          "fontSize": "var:preset|font-size|small"
         }
       },
       "heading": {
         "typography": {
           "fontFamily": "var:preset|font-family|serif",
-          "lineHeight": "1.1"
+          "fontWeight": "700",
+          "lineHeight": "1.08"
+        }
+      },
+      "h1": {
+        "typography": {
+          "fontSize": "var:preset|font-size|xx-large"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "var:preset|font-size|x-large"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontSize": "var:preset|font-size|large"
         }
       },
       "link": {
         "color": {
-          "text": "var:preset|color|accent"
+          "text": "var:preset|color|ink"
+        },
+        "typography": {
+          "textDecoration": "none"
         }
       }
     },
     "blocks": {
-      "core/post-title": {
-        "typography": {
-          "fontFamily": "var:preset|font-family|serif"
-        }
-      },
       "core/navigation": {
         "typography": {
+          "fontFamily": "var:preset|font-family|condensed-sans",
           "fontSize": "var:preset|font-size|small",
           "fontWeight": "700",
+          "letterSpacing": "0.05em",
           "textTransform": "uppercase"
+        }
+      },
+      "core/post-title": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|serif",
+          "lineHeight": "1.05"
+        }
+      },
+      "core/post-terms": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|condensed-sans",
+          "fontSize": "var:preset|font-size|x-small",
+          "fontWeight": "700",
+          "letterSpacing": "0.06em",
+          "textTransform": "uppercase"
+        }
+      },
+      "core/query-pagination": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|condensed-sans",
+          "fontWeight": "700"
+        }
+      },
+      "core/separator": {
+        "color": {
+          "background": "var:preset|color|line"
         }
       }
     }
@@ -149,6 +312,15 @@
       "name": "footer",
       "title": "Footer",
       "area": "footer"
+    }
+  ],
+  "customTemplates": [
+    {
+      "name": "front-page",
+      "title": "Newspaper Front Page",
+      "postTypes": [
+        "page"
+      ]
     }
   ]
 }
