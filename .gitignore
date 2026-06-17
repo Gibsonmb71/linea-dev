@@ -1,0 +1,21 @@
+# WordPress private/local files
+wp-config.php
+.env
+*.sql
+*.zip
+*.tar.gz
+
+# Uploads/media from real sites
+wp-content/uploads/
+uploads/
+
+# Dependencies/build output
+node_modules/
+dist/
+build/
+.cache/
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/

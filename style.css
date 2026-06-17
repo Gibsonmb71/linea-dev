@@ -1,0 +1,28 @@
+/*
+Theme Name: Weekly Wildcat
+Theme URI: https://github.com/weeklywildcat/wordpress-theme
+Author: Weekly Wildcat contributors
+Author URI: https://github.com/weeklywildcat
+Description: An open-source WordPress block theme for school newspaper and student journalism websites.
+Version: 0.1.0
+Requires at least: 6.5
+Requires PHP: 8.1
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: weekly-wildcat
+Tags: blog, news, education, full-site-editing, block-patterns
+*/
+
+/* Base styles live mostly in theme.json. Keep this file for WordPress theme metadata and small global fallbacks. */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-underline-offset: 0.18em;
+}
