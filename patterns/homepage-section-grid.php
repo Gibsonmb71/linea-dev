@@ -6,10 +6,10 @@
  * Description: A responsive grid of native Query Loop sections for latest stories.
  */
 ?>
-<!-- wp:group {"align":"wide","className":"linea-story-grid","style":{"spacing":{"blockGap":"var:preset|spacing|60","margin":{"bottom":"var:preset|spacing|60"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignwide linea-story-grid">
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
+<!-- wp:group {"align":"wide","className":"linea-story-grid linea-newsroom-grid","style":{"spacing":{"blockGap":"var:preset|spacing|60","margin":{"bottom":"var:preset|spacing|60"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide linea-story-grid linea-newsroom-grid">
+	<!-- wp:group {"className":"linea-newsroom-column linea-latest-column","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group linea-newsroom-column linea-latest-column">
 		<!-- wp:heading {"className":"linea-section-heading","level":2} -->
 		<h2 class="wp-block-heading linea-section-heading">Latest News</h2>
 		<!-- /wp:heading -->
@@ -44,10 +44,10 @@
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
+	<!-- wp:group {"className":"linea-newsroom-column linea-spotlight-column","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group linea-newsroom-column linea-spotlight-column">
 		<!-- wp:heading {"className":"linea-section-heading","level":2} -->
-		<h2 class="wp-block-heading linea-section-heading">Spotlight</h2>
+		<h2 class="wp-block-heading linea-section-heading">Opinion & Features</h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:query {"query":{"perPage":3,"pages":0,"offset":4,"postType":"post","order":"desc","orderBy":"date","inherit":false},"className":"linea-tight-query"} -->
@@ -62,10 +62,10 @@
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
+	<!-- wp:group {"className":"linea-newsroom-column linea-briefs-column","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group linea-newsroom-column linea-briefs-column">
 		<!-- wp:heading {"className":"linea-section-heading","level":2} -->
-		<h2 class="wp-block-heading linea-section-heading">More Stories</h2>
+		<h2 class="wp-block-heading linea-section-heading">Campus Briefs</h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:query {"query":{"perPage":5,"pages":0,"offset":7,"postType":"post","order":"desc","orderBy":"date","inherit":false},"className":"linea-tight-query"} -->
