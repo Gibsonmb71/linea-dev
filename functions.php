@@ -79,3 +79,5 @@ function linea_register_pattern_categories() {
 	);
 }
 add_action( 'init', 'linea_register_pattern_categories' );
+
+require_once get_template_directory() . '/inc/demo-import.php';
