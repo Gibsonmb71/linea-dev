@@ -13,6 +13,10 @@
 		<!-- wp:post-template -->
 			<!-- wp:cover {"useFeaturedImage":true,"dimRatio":58,"overlayColor":"ink","isUserOverlayColor":true,"minHeight":520,"minHeightUnit":"px","className":"linea-lead-story","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","right":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|60"}}},"layout":{"type":"constrained","contentSize":"720px","wideSize":"720px","justifyContent":"left"}} -->
 			<div class="wp-block-cover linea-lead-story" style="padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60);min-height:520px"><span aria-hidden="true" class="wp-block-cover__background has-ink-background-color has-background-dim-60 has-background-dim"></span><div class="wp-block-cover__inner-container">
+				<!-- wp:paragraph {"className":"linea-alert-label","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}},"textColor":"paper"} -->
+				<p class="linea-alert-label has-paper-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--30)">Top Story</p>
+				<!-- /wp:paragraph -->
+
 				<!-- wp:post-terms {"term":"category","style":{"elements":{"link":{"color":{"text":"var:preset|color|paper"}}},"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}},"textColor":"paper"} /-->
 
 				<!-- wp:post-title {"isLink":true,"level":2,"style":{"typography":{"fontSize":"clamp(2.2rem, 6vw, 4.8rem)","lineHeight":"0.96"},"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|40"}}},"textColor":"paper"} /-->
@@ -43,8 +47,8 @@
 		<!-- wp:query {"query":{"perPage":3,"pages":0,"offset":1,"postType":"post","order":"desc","orderBy":"date","inherit":false},"className":"linea-card-list"} -->
 		<div class="wp-block-query linea-card-list">
 			<!-- wp:post-template -->
-				<!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} -->
-				<div class="wp-block-columns are-vertically-aligned-center">
+				<!-- wp:columns {"verticalAlignment":"center","className":"linea-editor-pick","style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} -->
+				<div class="wp-block-columns are-vertically-aligned-center linea-editor-pick">
 					<!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
 					<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%">
 						<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3","style":{"border":{"radius":"0px"}}} /-->
@@ -78,12 +82,12 @@
 
 		<!-- wp:group {"className":"linea-newsletter-box","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|30"}},"backgroundColor":"newsprint","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group linea-newsletter-box has-newsprint-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
-			<!-- wp:heading {"level":2,"fontSize":"medium"} -->
-			<h2 class="wp-block-heading has-medium-font-size">Stay informed</h2>
+			<!-- wp:heading {"className":"linea-newsletter-heading","level":2,"fontSize":"medium"} -->
+			<h2 class="wp-block-heading linea-newsletter-heading has-medium-font-size">Newsroom Newsletter</h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"fontSize":"small"} -->
-			<p class="has-small-font-size">Add a newsletter, announcements, or staff note block here from the Site Editor.</p>
+			<p class="has-small-font-size">Add announcements, staff notes, or a signup form here from the Site Editor.</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
