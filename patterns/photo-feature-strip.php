@@ -19,6 +19,12 @@
 			<!-- wp:post-title {"isLink":true,"level":3,"fontSize":"medium"} /-->
 			<!-- wp:post-date {"fontSize":"x-small"} /-->
 		<!-- /wp:post-template -->
+
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph {"fontSize":"small"} -->
+			<p class="has-small-font-size">Photo-forward stories will appear here after posts are published.</p>
+			<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
 	</div>
 	<!-- /wp:query -->
 </div>
